@@ -13,9 +13,9 @@
 ========================= */
 
 body {
-    font-family: "DM Sans", sans-serif;
-    background-color: #ffffff;
-    color: #171717;
+    font-family: "JetBrains Mono", monospace;
+    background-color: #0f1117;
+    color: #e5e7eb;
     line-height: 1.6;
 }
 
@@ -24,7 +24,9 @@ body {
 ========================= */
 
 header {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #24504d;
+    background-color: rgba(15, 17, 23, 0.92);
+    backdrop-filter: blur(8px);
 }
 
 .navbar {
@@ -40,8 +42,15 @@ header {
 
 .logo {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: -0.02em;
+    color: #f9fafb;
+    position: relative;
+}
+
+.logo::before {
+    content: "> ";
+    color: #38b2a6;
 }
 
 .nav-links {
@@ -52,13 +61,16 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #525252;
+    color: #94a3b8;
     font-size: 0.95rem;
-    transition: color 0.2s ease;
+    position: relative;
 }
 
-.nav-links a:hover {
-    color: #171717;
+.nav-links a::before {
+    content: "/";
+    color: #38b2a6;
+    margin-right: 0.35rem;
+    opacity: 0.8;
 }
 
 /* =========================
@@ -68,53 +80,141 @@ header {
 .hero {
     max-width: 1100px;
     margin: 0 auto;
-
     padding: 8rem 2rem;
 }
 
 .hero h1 {
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.1;
-
     margin-bottom: 1.5rem;
-
     letter-spacing: -0.04em;
+    color: #f8fafc;
+}
+
+.hero h1::before {
+    content: "<h1> ";
+    color: #38b2a6;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 1rem;
+    letter-spacing: 0;
+}
+
+.hero h1::after {
+    content: " </h1>";
+    color: #38b2a6;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    margin-top: 1rem;
+    letter-spacing: 0;
 }
 
 .hero p {
-    max-width: 600px;
-
-    font-size: 1.15rem;
-    color: #525252;
-
+    max-width: 650px;
+    font-size: 1.05rem;
+    color: #94a3b8;
     margin-bottom: 2rem;
 }
+
+/* =========================
+   Cards Section
+========================= */
+
+.hero-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.card {
+    min-height: 220px;
+    padding: 1.25rem;
+    background-color: #151821;
+    border: 1px solid #24504d;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(56, 178, 166, 0.06), transparent 45%);
+    pointer-events: none;
+}
+
+.card-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #7ad3cb;
+    background-color: rgba(56, 178, 166, 0.10);
+    border: 1px solid rgba(56, 178, 166, 0.22);
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 0.75rem;
+}
+
+.card h3::before {
+    content: "// ";
+    color: #38b2a6;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+/* =========================
+   Button
+========================= */
 
 .btn {
     display: inline-block;
 
     text-decoration: none;
 
-    background-color: #171717;
-    color: #ffffff;
+    background-color: #38b2a6;
+    color: #f8fafc;
 
     padding: 0.9rem 1.5rem;
 
     border-radius: 8px;
 
-    font-weight: 500;
-
-    transition: all 0.2s ease;
-}
-
-.btn:hover {
-    background-color: #2d2d2d;
+    font-weight: 600;
 }
 
 /* =========================
    Responsive
 ========================= */
+
+@media (max-width: 992px) {
+    .hero-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -128,10 +228,18 @@ header {
     }
 
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.98rem;
+    }
+
+    .hero-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 190px;
     }
 }

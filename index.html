@@ -5,43 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syed Alwee</title>
 
-    <!-- DM Sans Font -->
+    <!-- JetBrains Mono Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                Syed Alwee
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            Syed Alwee
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+
+        <!-- Typed text replaces h1 -->
+        <h1 id="typed-text"></h1>
+
+        <p>
+             Cybersecurity & Digital Forensics graduate from Temasek Polytechnic, 
+             passionate about technology and understanding people through behavioral insights and continuous learning.
+        </p>
+
+        <div class="hero-cards">
+            <div class="card">
+                <span class="card-label">About</span>
+                <h3>Who I am</h3>
+                <p>
+                    A cybersecurity and digital forensics student with a strong
+                    interest in building purposeful digital experiences.
+                </p>
             </div>
 
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+            <div class="card">
+                <span class="card-label">Projects</span>
+                <h3>What I build</h3>
+                <p>
+                    Clean, practical, and thoughtful work focused on solving
+                    real-world problems through technology.
+                </p>
+            </div>
 
-    <main>
-        <section class="hero">
+            <div class="card">
+                <span class="card-label">Skills</span>
+                <h3>What I do</h3>
+                <p>
+                    I enjoy working on technical problem-solving, portfolio
+                    development, and creating polished web experiences.
+                </p>
+            </div>
 
-            <h1>
-                Hello, I'm Syed.
-            </h1>
+            <div class="card">
+                <span class="card-label">Contact</span>
+                <h3>Let's connect</h3>
+                <p>
+                    Open to connecting, collaborating, and sharing ideas around
+                    technology, growth, and digital work.
+                </p>
+            </div>
+        </div>
 
-            <p>
-                I build clean, thoughtful digital experiences and enjoy
-                solving real-world problems through technology.
-            </p>
+    </section>
+</main>
 
-        </section>
-    </main>
+<!-- Typing animation script -->
+<script>
+const text = "Hello, I'm Syed.";
+const typedText = document.getElementById("typed-text");
+
+let index = 0;
+
+function type() {
+    if (index < text.length) {
+        typedText.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 80);
+    }
+}
+
+type();
+</script>
 
 </body>
 </html>
