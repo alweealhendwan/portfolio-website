@@ -32,12 +32,16 @@
 <main>
     <section class="hero">
 
-        <!-- Typed text replaces h1 -->
+        <!-- Typed heading -->
         <h1 id="typed-text"></h1>
 
+        <!-- Paragraphs -->
         <p>
-             Cybersecurity & Digital Forensics graduate from Temasek Polytechnic, 
-             passionate about technology and understanding people through behavioral insights and continuous learning.
+            Cybersecurity & Digital Forensics graduate from Temasek Polytechnic, passionate about technology and understanding people through behavioral insights and continuous learning.
+        </p>
+
+        <p>
+            I thrive in collaborative environments, tackling challenges with clear communication and adaptability.
         </p>
 
         <div class="hero-cards">
@@ -45,8 +49,7 @@
                 <span class="card-label">About</span>
                 <h3>Who I am</h3>
                 <p>
-                    A cybersecurity and digital forensics student with a strong
-                    interest in building purposeful digital experiences.
+                    A cybersecurity and digital forensics student with a strong interest in building purposeful digital experiences.
                 </p>
             </div>
 
@@ -54,8 +57,7 @@
                 <span class="card-label">Projects</span>
                 <h3>What I build</h3>
                 <p>
-                    Clean, practical, and thoughtful work focused on solving
-                    real-world problems through technology.
+                    Clean, practical, and thoughtful work focused on solving real-world problems through technology.
                 </p>
             </div>
 
@@ -63,8 +65,7 @@
                 <span class="card-label">Skills</span>
                 <h3>What I do</h3>
                 <p>
-                    I enjoy working on technical problem-solving, portfolio
-                    development, and creating polished web experiences.
+                    I enjoy working on technical problem-solving, portfolio development, and creating polished web experiences.
                 </p>
             </div>
 
@@ -72,8 +73,7 @@
                 <span class="card-label">Contact</span>
                 <h3>Let's connect</h3>
                 <p>
-                    Open to connecting, collaborating, and sharing ideas around
-                    technology, growth, and digital work.
+                    Open to connecting, collaborating, and sharing ideas around technology, growth, and digital work.
                 </p>
             </div>
         </div>
@@ -81,7 +81,7 @@
     </section>
 </main>
 
-<!-- Typing animation script -->
+<!-- Typing animation -->
 <script>
 const text = "Hello, I'm Syed.";
 const typedText = document.getElementById("typed-text");
@@ -93,6 +93,10 @@ function type() {
         typedText.textContent += text.charAt(index);
         index++;
         setTimeout(type, 80);
+    } else {
+        setTimeout(() => {
+            typedText.classList.add("cursor-hide");
+        }, 2000);
     }
 }
 
