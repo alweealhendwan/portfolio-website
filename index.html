@@ -12,7 +12,6 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
@@ -23,6 +22,7 @@
 
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -31,57 +31,195 @@
 
 <main>
     <section class="hero">
-
-        <!-- Typed heading -->
         <h1 id="typed-text"></h1>
 
-        <!-- Paragraphs -->
-        <p>
-            Cybersecurity & Digital Forensics graduate from Temasek Polytechnic, 
-            passionate about technology and understanding people through behavioral insights and continuous learning.
-            Incoming NSF.
-        </p>
+        <div class="hero-status-tags">
+            <span class="hero-status-tag">
+                <span class="status-dot"></span>
+                Incoming NSF
+            </span>
 
-        <div class="hero-cards">
-            <div class="card">
-                <span class="card-label">About</span>
-                <h3>Who I am</h3>
-                <p>
-                    A cybersecurity and digital forensics student with a strong interest in building purposeful digital experiences.
-                </p>
-            </div>
+            <span class="hero-status-tag">
+                <span class="status-dot"></span>
+                Not available to work
+            </span>
 
-            <div class="card">
-                <span class="card-label">Projects</span>
-                <h3>What I build</h3>
-                <p>
-                    Clean, practical, and thoughtful work focused on solving real-world problems through technology.
-                </p>
-            </div>
+            <span class="hero-status-tag">
+                <span class="status-dot"></span>
+                Incoming SIT Student
+            </span>
+        </div>
+    </section>
 
-            <div class="card">
-                <span class="card-label">Skills</span>
-                <h3>What I do</h3>
-                <p>
-                    I enjoy working on technical problem-solving, portfolio development, and creating polished web experiences.
-                </p>
-            </div>
-
-            <div class="card">
-                <span class="card-label">Contact</span>
-                <h3>Let's connect</h3>
-                <p>
-                    Open to connecting, collaborating, and sharing ideas around technology, growth, and digital work.
-                </p>
-            </div>
+    <section id="about" class="content-section">
+        <div class="section-heading">
+            <span class="section-number">01</span>
+            <h2>About</h2>
         </div>
 
+        <div class="section-line"></div>
+
+        <div class="about-layout">
+            <div class="about-main card">
+                <div class="tag-group">
+                    <span class="about-tag">Cybersecurity</span>
+                    <span class="about-tag">Behavioral Insights</span>
+                    <span class="about-tag">Leadership</span>
+                    <span class="about-tag">Problem Solving</span>
+                </div>
+
+                <p>
+                    I’m Syed Alwee, a Cybersecurity & Digital Forensics graduate from Temasek Polytechnic with a strong interest in security, and building work that is both practical and meaningful.
+                </p>
+
+                <p>
+                    My approach combines technical thinking with communication, adaptability, and a genuine interest in understanding people, which helps me work effectively across both technical and collaborative environments.
+                </p>
+
+                <p>
+                    Recently accepted into SIT's Information and Communications Technology (Information Security) course.
+                </p>
+            </div>
+
+            <div class="about-side">
+                <div class="info-card card">
+                    <span class="card-label">Education</span>
+
+                    <div class="education-list">
+                        <div class="education-item">
+                            <p class="edu-school">Temasek Polytechnic</p>
+                            <p class="edu-course">Cybersecurity & Digital Forensics</p>
+                        </div>
+
+                        <div class="education-divider"></div>
+
+                        <div class="education-item">
+                            <p class="edu-school">ITE College Central</p>
+                            <p class="edu-course">Cyber & Network Security</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card card">
+                    <span class="card-label">Focus</span>
+                    <p>Technology, security, teamwork, and continuous growth</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="content-section">
+        <div class="section-heading">
+            <span class="section-number">02</span>
+            <h2>Experience</h2>
+        </div>
+
+        <div class="section-line"></div>
+
+        <div class="experience-list">
+            <article class="experience-card card">
+                <div class="experience-top">
+                    <span class="experience-date">Sep 2025 - Feb 2026</span>
+                    <span class="experience-type">Work</span>
+                </div>
+
+                <h3 class="experience-role">IT Deployment Intern</h3>
+                <p class="experience-company">Rayton Solutions</p>
+
+                <ul class="experience-points">
+                    <li>Supported large-scale SSOE2 laptop deployments for primary and secondary schools, handling imaging, provisioning, asset tagging, and on-site device handovers.</li>
+                    <li>Configured Windows laptops (mainly Lenovo and HP) including BIOS setup, software installation, and readiness checks for classroom use.</li>
+                    <li>Progressed from deployment member to Team Lead, coordinating daily tasks, guiding members, and ensuring accurate documentation.</li>
+                    <li>Liaised directly with ICT managers and school staff to manage deployment timelines, resolve issues, and provide on-site technical support.</li>
+                    <li>Set up computer labs and mobile carts, and performed secure data sanitisation of old devices using Active KillDisk.</li>
+                </ul>
+
+                <div class="experience-tags">
+                    <span class="about-tag">Deployment</span>
+                    <span class="about-tag">Windows</span>
+                    <span class="about-tag">Team Lead</span>
+                    <span class="about-tag">On-site Support</span>
+                </div>
+            </article>
+
+            <article class="experience-card card">
+                <div class="experience-top">
+                    <span class="experience-date">Oct 2022 - Mar 2023</span>
+                    <span class="experience-type">Work</span>
+                </div>
+
+                <h3 class="experience-role">Cybersecurity Intern</h3>
+                <p class="experience-company">NCS</p>
+
+                <ul class="experience-points">
+                    <li>Gained hands-on experience with Tenable Nessus and Trend Micro TippingPoint, performing vulnerability assessments and intrusion prevention in a live environment.</li>
+                    <li>Installed and managed Nessus agents, ran regular vulnerability scans, and reviewed reports to highlight critical security issues to senior members.</li>
+                    <li>Monitored network traffic with TippingPoint, updated malware signatures, and analyzed security logs to detect and block suspicious activity.</li>
+                    <li>Used Excel and Confluence to maintain project documentation, track milestones, and keep security and compliance records organised and accessible.</li>
+                </ul>
+
+                <div class="experience-tags">
+                    <span class="about-tag">Nessus</span>
+                    <span class="about-tag">TippingPoint</span>
+                    <span class="about-tag">Vulnerability Scanning</span>
+                    <span class="about-tag">Documentation</span>
+                </div>
+            </article>
+
+            <article class="experience-card card">
+                <div class="experience-top">
+                    <span class="experience-date">Apr 2021 - Apr 2023</span>
+                    <span class="experience-type">Club</span>
+                </div>
+
+                <h3 class="experience-role">Co-Founder & EXCO, Network & Security Technology Club</h3>
+                <p class="experience-company">ITE College Central</p>
+
+                <ul class="experience-points">
+                    <li>Co-founded the club alongside classmates with the motto “Learn. Contribute. Grow as one Network” to raise cybersecurity awareness and educate the public on online threats.</li>
+                    <li>As Welfare EXCO, organised games and activities to strengthen club bonding and foster teamwork.</li>
+                    <li>Managed admin tasks including WhatsApp and Discord announcements for effective communication and member engagement.</li>
+                </ul>
+
+                <div class="experience-tags">
+                    <span class="about-tag">Leadership</span>
+                    <span class="about-tag">Community</span>
+                    <span class="about-tag">Teamwork</span>
+                    <span class="about-tag">Communication</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="projects" class="content-section">
+        <div class="section-heading">
+            <span class="section-number">03</span>
+            <h2>Projects</h2>
+        </div>
+
+        <div class="section-line"></div>
+
+        <div class="empty-block card">
+            <p></p>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section">
+        <div class="section-heading">
+            <span class="section-number">04</span>
+            <h2>Contact</h2>
+        </div>
+
+        <div class="section-line"></div>
+
+        <div class="empty-block card">
+            <p></p>
+        </div>
     </section>
 </main>
 
-<!-- Typing animation -->
 <script>
-const text = "Hello, I'm Syed.";
+const text = "Hello, I'm Alwee.";
 const typedText = document.getElementById("typed-text");
 
 let index = 0;
